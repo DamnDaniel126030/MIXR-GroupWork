@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-
-    const ingredient = 
+    
 
     
 
-
-
-    function creatButton(data){
+    function createButton(data){
 
         let buttons = "";
 
@@ -16,13 +13,24 @@ document.addEventListener("DOMContentLoaded", ()=>{
             let button = 
             `
             <div class="ingredient-button">
-            <img src= ${"./image/ingredients/alma_removebg-preview.png"} alt="">
+                <img src= ${element.image} alt="">
+                <p>${element.name}</p>
             </div>
+            `;
             
-            `
-            
+            buttons += button;
         }
+        document.getElementById("ingredient").innerHTML = buttons;
+
+        
+        
 
     }
+    createButton(data);
+
+
+
+    
+    
 
 })
