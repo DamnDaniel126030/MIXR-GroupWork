@@ -5,9 +5,15 @@
 }
 .ingredient-button{
     width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     margin: 4px 0;
+    background-image: url('image/craftingTable/Crafting_Table_GUI.jpg');
+    background-size: cover;
+    color: white;
+    font-family: serif;
+
 }
 
 .foodTable{
@@ -15,6 +21,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+
 }
 .previouslyFoodDiv{
     border: 1px solid black;
@@ -26,6 +34,8 @@
 .mixrButtonDiv{
     display: flex;
     justify-content: center;
+   
+    
     
     
 }
@@ -49,10 +59,12 @@
 
 }
 
+
+
 .craftedFoodDiv{
     padding: 8px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     border: 1px solid black;
     grid-column: 3;
     grid-row: 1 / 8;
@@ -62,5 +74,32 @@
    
 }
 
+.navbar {
+    background-image: url('image/pageimages/wp10944792.png');
+    
+}
 
+.navbar-brand {
+    color: rgb(255, 255, 255);
+    font-family: serif;
+}
+
+h3 {
+    color: white;
+    font-family: serif;
+}
+
+body {
+    background-image: url('image/pageimages/Dirt_background_BE1.webp');
+    background-size: cover; 
+}
+
+.btn {
+    background-image: url('image/pageimages/wp10944792.png');
+    color: white;
+    font-family: serif;
+    width: 120px;
+    height: 80px;
+    border: 2px white solid;
+}
 

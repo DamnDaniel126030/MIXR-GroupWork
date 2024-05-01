@@ -14,19 +14,18 @@
     <script src="main.js"></script>
 </head>
 
-<body style="background-image: url('image/pageimages/7cee20863cf74145e5124aae1fcf4374.jpg');
-background-size: cover; ">
+<body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="image/pageimages/6141823549.png" alt="Logo" width="40" height="34" id="bg_pic" class="d-inline-block align-text-top">
+            <a class="navbar-brand" styhref="#">
+                <img src="image/pageimages/6141823549.png" alt="Logo" width="40" height="34" id="bg_pic" class="d-inline-block">
                 MIXR - A Minecraft Foodcrafting Website
             </a>
         </div>
     </nav>
 
     <div>
-        <h3>Click on the pictures to begin crafting:</h3>
+        <h3>Click on the pictures to begin crafting</h3>
     </div>
 
     <div class="ingredient" id="ingredient">
@@ -36,15 +35,13 @@ background-size: cover; ">
 
     <div class="foodTable">
         <div class="previouslyFoodDiv">
-            <h3>Previously crafted foods</h3>
+            <h3>Crafted Foods Chest</h3>
             <p id="previouslyFood">
             
             </p>
 
         </div>
-        <div class="mixrButtonDiv">
-            <button class="btn btn-success">MIXR</button>
-        </div>
+        
         <div  class="tableForIngredientMainDiv">
             
             <div class="tableForIngredient" id="1"> </div>
@@ -53,8 +50,11 @@ background-size: cover; ">
             <div class="tableForIngredient" id="4"></div>
             
         </div>
+        <div class="mixrButtonDiv">
+            <button class="btn">MIXR</button>
+        </div>
         <div class="craftedFoodDiv">
-            <h3>Crafted food</h3>
+            <h3 id="craftedFood">Crafted food</h3>
             <p id="craftedFood">
                 
             </p>
