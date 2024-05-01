@@ -37,6 +37,6 @@ function writeJSONFile (filePath, data){
     });
 };
 
-writeJSONFile(filePath, jsonString + "\n")
+writeJSONFile(filePath, jsonString)
     .then((message) => console.log(message))
     .catch((error) => console.error("Error writing this file" + error));
