@@ -29,10 +29,11 @@ function readDirectory(folderName){
 
 readDirectory(folderName)
     .then((fileNames) => {
-        for (let name of fileNames) {
-            ingredientImgs.push(name)
+        for (let name of fileNames){
+            ingredientImgs.push(name);
         }
-        console.log("Aha");
+        console.log("OK");
+        writeJSONs();
     })
     .catch((error) => {
         console.error("Error reading this directory " + error);
@@ -53,6 +54,9 @@ function writeJSONs(){
         jsonArray.push(ingredient)
     };
     jsonString = JSON.stringify(jsonArray)
+    writeJSONFile(filePath, jsonString)
+        .then((message) => console.log(message))
+        .catch((error) => console.error("Error writing this file " + error));
 }
 
 
@@ -69,11 +73,7 @@ function writeJSONFile (filePath, data){
     });
 };
 
-writeJSONs();
 
-writeJSONFile(filePath, jsonString)
-    .then((message) => console.log(message))
-    .catch((error) => console.error("Error writing this file " + error));
 
 
 
