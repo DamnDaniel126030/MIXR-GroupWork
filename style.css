@@ -1,0 +1,11 @@
+.ingredient{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(calc(10%), 1fr));
+    padding: 8px;
+}
+.ingredient-button{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
+}
