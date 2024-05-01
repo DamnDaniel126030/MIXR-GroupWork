@@ -31,6 +31,14 @@
     grid-row: 1 / 8;
 }
 
+.previouslyFoodBGDiv {
+    background-image: url('image/pageimages/Minecraft-Chest.jpg');
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    margin: auto;
+}
+
 .mixrButtonDiv{
     display: flex;
     justify-content: center;
@@ -63,12 +71,20 @@
 
 .craftedFoodDiv{
     padding: 8px;
-    display: flex;
     justify-content: center;
     border: 1px solid black;
     grid-column: 3;
     grid-row: 1 / 8;
     
+}
+
+
+.craftedFoodBGDiv {
+    background-image: url('image/pageimages/Crafting_Table_JE3_BE2.webp');
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+    margin: auto;
 }
 .addedIngredient{
    
