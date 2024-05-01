@@ -6,13 +6,13 @@ Szeretjük az Infinite Craftot..
 
 **Funkcionális követelmények** 
 
-Maximum 4 termék összerakása 
+- Maximum 4 termék összerakása 
 
-  1. alapanyag után azokat, amikkel nincs létező termék, disable 
+    1. alapanyag után azokat, amikkel nincs létező termék, disable 
 
-  2. - 3. alapanyag után szintén 
+    2. és 3. alapanyag után szintén 
 
-  4. alapanyag után a termék megjelenítése, amihez ez a 4 szükséges alapanyag 
+    4. alapanyag után a termék megjelenítése, amihez ez a 4 szükséges alapanyag 
 
 - Mix gomb, ami megjeleníti a 3 alapanyag kombinációját 
 
