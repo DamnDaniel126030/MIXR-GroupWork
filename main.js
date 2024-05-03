@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   
     function mixrButton(){
         let boolean1 = false;
-        let boolean2 = true;
         foodArray.forEach(element => {  
 
             let difference
@@ -145,11 +144,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 document.getElementById("2").innerHTML  = "";
                 document.getElementById("3").innerHTML  = "";
                 document.getElementById("4").innerHTML  = "";
-                    
+                count = 0;
                 boolean1 = true;
             };
         });
-        if(!boolean1 && !boolean2){
+        if(!boolean1){
             alert("No recipe found with these ingredients!");
             ingredient_name_array = [];
             index= 1;
@@ -160,8 +159,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }else{
             index= 1
             ingredient_name_array = [];
+            
         }
-        
+        count = 0
         enableButtons();
     }
 
