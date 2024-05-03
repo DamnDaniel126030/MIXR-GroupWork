@@ -95,12 +95,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 <p>${element.name}</p>
                 `
 
-                
                 document.getElementById("1").innerHTML  = "";
                 document.getElementById("2").innerHTML  = "";
                 document.getElementById("3").innerHTML  = "";
                 document.getElementById("4").innerHTML  = "";
-            }
+            
+                boolean = true;
+            };
         });
         if(!boolean){
             alert("nincs ilyen opció");
@@ -116,8 +117,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
     }
            
-
-
 
     window.mixrButton = mixrButton;
     window.ingredientAdds = ingredientAdds;
