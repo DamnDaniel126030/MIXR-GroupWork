@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     };
 
   
-    function mixrButton(){
+    function mixrButton() {
         let boolean1 = false;
         let boolean2 = true;
         foodArray.forEach(element => {  
