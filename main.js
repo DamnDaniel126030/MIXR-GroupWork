@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let index= 1
     let ingredient_name_array = [];
 
+    let usedRecipes = [];
     let toDisableIgredients = [];
     let toDisableIgredientsUnique = [];
 
@@ -62,19 +63,20 @@ document.addEventListener("DOMContentLoaded", ()=>{
             `
             index++;
             ingredientNeededArray.forEach(recipe => {
-                if (!recipe.includes(ingredient_name)){
-                    recipe.forEach(item => {
-                        toDisableIgredients.push(item)
-                    })
+                if (recipe.includes(ingredient_name)){
+                    usedRecipes.push(recipe)
                 }
             });
+            console.log(usedRecipes);
             toDisableIgredientsUnique = [...new Set(toDisableIgredients)]
             console.log(toDisableIgredientsUnique);
-            for (let i = 0; i < toDisableIgredientsUnique.length; i++){
-                if (ingredientArray[i].name == toDisableIgredientsUnique[i]){
-                    document.getElementById(ingredientArray[i].id).classList.add("d-none")
-                }
-            }
+            toDisableIgredientsUnique.forEach(ingredient => {
+                ingredientArray.forEach(item => {
+                    if (ingredient == item.name){
+                        document.getElementById(item.id).classList.add("d-none")
+                    }
+                })
+            })
             toDisableIgredients = [];
             toDisableIgredientsUnique = [];
         }
