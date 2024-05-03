@@ -129,10 +129,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
     }
 
+    function  removeButton(){
+        ingredient_name_array = [];
+            index= 1;
+            document.getElementById("1").innerHTML  = "";
+            document.getElementById("2").innerHTML  = "";
+            document.getElementById("3").innerHTML  = "";
+            document.getElementById("4").innerHTML  = "";
+    }
+
     
   
    
-
+    window.removeButton = removeButton;
     window.mixrButton = mixrButton;
     window.ingredientAdds = ingredientAdds;
 })
