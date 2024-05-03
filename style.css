@@ -35,7 +35,7 @@
 
 .previouslyFoodBGDiv {
     background-image: url('image/pageimages/minecraft-stone-brick-texture.webp');
-    height: 400px;
+    height: 600px;
     width: 400px;
     background-size: cover;
     margin: auto;
@@ -121,5 +121,16 @@ body {
     width: 120px;
     height: 80px;
     border: 2px white solid;
+}
+
+footer {
+
+    width: 100%;
+    background-image: url('image/pageimages/wp10944792.png');
+    color: white;
+    font-family: serif;
+    text-align: center;
+
+    
 }
 
