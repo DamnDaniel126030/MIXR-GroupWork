@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             };
         });
         if(!boolean){
-            alert("No recipe was found with these ingredients!");
+            alert("No recipe found with these ingredients!");
             ingredient_name_array = [];
             index= 1;
             document.getElementById("1").innerHTML  = "";
