@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let buttons = "";
         for (let index = 0; index < ingredient_data.length; index++) {
             const element = ingredient_data[index];
-
             let button = 
             `
             <button onclick="ingredientAdds('${element.name}','${element.imgName}')" class="ingredient-button">
@@ -52,12 +51,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             ingredient_name_array.push(ingredient_name);    
             document.getElementById(index+"").innerHTML  += 
             `
-            <img style="width: 100px; height: 100px"  src= ${"./image/ingredients/"+imagePath+""} alt="">
+                <img style="width: 100px; height: 100px"  src= ${"./image/ingredients/"+imagePath+""} alt="">
             `
             index++;
         }
         else{
-            
             alert("Nem lehet négynél több hozzávalót használni!")
         }
     };
@@ -76,13 +74,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
             if(difference.length == 0){
                 document.getElementById("craftedFood").innerHTML = 
                 `
-                <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
-                <p>${element.name}</p>
+                    <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                    <p>${element.name}</p>
                 `
                 document.getElementById("previouslyFood").innerHTML += 
                 `
-                <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
-                <p>${element.name}</p>
+                    <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                    <p>${element.name}</p>
                 `
 
                 document.getElementById("1").innerHTML  = "";
@@ -91,7 +89,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 document.getElementById("4").innerHTML  = "";
                     
                 boolean = true;
-            }
+            };
         });
         if(!boolean){
             alert("nincs ilyen opció");

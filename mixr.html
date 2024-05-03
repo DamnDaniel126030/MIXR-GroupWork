@@ -15,65 +15,74 @@
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" styhref="#">
-                <img src="image/pageimages/6141823549.png" alt="Logo" width="40" height="34" id="bg_pic"
-                    class="d-inline-block">
-                MIXR - A Minecraft Foodcrafting Website
-            </a>
-        </div>
-    </nav>
+    <div class="h-100">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" styhref="#">
+                    <img src="image/pageimages/6141823549.png" alt="Logo" width="40" height="34" id="bg_pic"
+                        class="d-inline-block">
+                    MIXR - A Minecraft Foodcrafting Website
+                </a>
+            </div>
+        </nav>
 
-    <div>
-        <h3>Click on the pictures to begin crafting</h3>
+        <div>
+            <h3>Click on the pictures to begin crafting</h3>
+        </div>
+
+        <div class="ingredient" id="ingredient">
+
+
+        </div>
+        <div>
+            <img src="" alt="">
+        </div>
+        <br>
+        <br>
+        <div class="foodTable">
+            <div class="previouslyFoodDiv">
+                <h3>Previously crafted foods</h3>
+                <div class="previouslyFoodBGDiv">
+                    <p id="previouslyFood">
+                    </p>
+                </div>
+            </div>
+
+            <div class="tableForIngredientMainDiv">
+
+                <div class="tableForIngredient" id="1"> </div>
+                <div class="tableForIngredient" id="2"></div>
+                <div class="tableForIngredient" id="3"></div>
+                <div class="tableForIngredient" id="4"></div>
+            </div>
+            <div class="mixrButtonDiv">
+                <div>
+                    <button onclick="mixrButton()" class="btn btn-mixr">MIXR</button>
+                </div>
+                <div>
+                    <button onclick="removeButton()" class="btn btn-remove">REMOVE</button>
+                </div>
+            </div>
+
+            <div class="craftedFoodDiv">
+                <h3>Crafted food</h3>
+                <div class="craftedFoodBGDiv">
+                    <p id="craftedFood">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footerDiv align-items-end">
+            <h1>Thank you for using our page :3</h1>
+            <h3>Contact us on GitHub</h3>
+        </footer>
     </div>
-
-    <div class="ingredient" id="ingredient">
-
-
-    </div>
-
-    <div class="foodTable">
-        <div class="previouslyFoodDiv">
-            <h3>Previously crafted foods</h3>
-            <div class="previouslyFoodBGDiv">
-                <p id="previouslyFood">
-                </p>
-            </div>
-        </div>
-
-        <div class="tableForIngredientMainDiv">
-
-            <div class="tableForIngredient" id="1"> </div>
-            <div class="tableForIngredient" id="2"></div>
-            <div class="tableForIngredient" id="3"></div>
-            <div class="tableForIngredient" id="4"></div>
-        </div>
-        <div class="mixrButtonDiv">
-            <div>
-                <button onclick="mixrButton()" class="btn-mixr">MIXR</button>
-            </div>
-            <div>
-                <button onclick="removeButton()" class="btn-remove">REMOVE</button>
-            </div>
-        </div>
-        
-        <div class="craftedFoodDiv">
-            <h3>Crafted food</h3>
-            <div class="craftedFoodBGDiv">
-                <p id="craftedFood">
-                </p>
-            </div>
-        </div>
-    </div>
-
-
 </body>
+
 <!-- Teendok:
     - itemeket kozepre igazitani
     - disablelolve legyenek a gombok amikhez nincs recept
-    - craftolt itemek szovegenek szineit beallitani
     - stonebrickes divet automatikusan novelni a craftolt itemekkel
     - delete gomb - itemek kivetele a crafting gridbol
 -->
