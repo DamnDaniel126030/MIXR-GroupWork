@@ -115,9 +115,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     <p>${element.name}</p>
                 `
                 document.getElementById("previouslyFood").innerHTML += 
-                `
-                    <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
-                    <p>${element.name}</p>
+                `   <div style="background-image: url('image/pageimages/itemframe.webp'); background-size: cover; background-repeat: no-repeat; width: 150px; height: 150px;">
+                        <div>
+                            <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                            <p>${element.name}</p>
+                        </div>
+                    </div>
                 `
 
                 document.getElementById("1").innerHTML  = "";
