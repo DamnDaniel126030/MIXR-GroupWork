@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             if(difference.length == 0){
                 document.getElementById("craftedFood").innerHTML = 
                 `
-                    <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                    <img style="width: 150px; height: 150px"  src= ${"./image/foods/"+element.imgName+""} alt="">
                     <p>${element.name}</p>
                 `
                 document.getElementById("previouslyFood").innerHTML += 
