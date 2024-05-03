@@ -44,11 +44,9 @@
 .mixrButtonDiv{
     display: flex;
     justify-content: center;
-   
-    
-    
     
 }
+
 .tableForIngredientMainDiv{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(calc(25%), 1fr));
@@ -114,13 +112,20 @@ body {
     background-size: cover; 
 }
 
-.btn {
+.btn-mixr {
     background-image: url('image/pageimages/wp10944792.png');
     color: white;
     font-family: serif;
     width: 120px;
     height: 80px;
     border: 2px white solid;
+    margin-left: 20px;
+}
+
+.btn-remove{
+    width: 120px;
+    height: 80px;
+    margin-left: 20px;
 }
 
 footer {
