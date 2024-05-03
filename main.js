@@ -84,13 +84,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 <p>${element.name}</p>
                 `
 
-                
                 document.getElementById("1").innerHTML  = "";
                 document.getElementById("2").innerHTML  = "";
                 document.getElementById("3").innerHTML  = "";
                 document.getElementById("4").innerHTML  = "";
             
-                
                 boolean = true;
             };
         });
@@ -107,8 +105,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
             ingredient_name_array = [];
         }        
     };
-
-
 
     window.mixrButton = mixrButton;
     window.ingredientAdds = ingredientAdds;
