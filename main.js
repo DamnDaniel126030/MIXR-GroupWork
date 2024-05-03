@@ -13,10 +13,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const element = ingredient_data[index];
             let button = 
             `
-                <button onclick="ingredientAdds('${element.name}','${element.imgName}')" class="ingredient-button">
-                    <img style="width: 40px" src= ${"./image/ingredients/"+element.imgName+""} alt="">
-                    <p >${element.name}</p>
-                </button>
+            <button onclick="ingredientAdds('${element.name}','${element.imgName}')" class="ingredient-button">
+                <img style="width: 40px" src= ${"./image/ingredients/"+element.imgName+""} alt="">
+                <p >${element.name}</p>
+                
+            </button>
             `;
             
             buttons += button;
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let ingredient_name_array = [];
 
     function ingredientAdds(ingredient_name, imagePath){
-        if(ingredient_name_array.length <= 4 ){
+        if(ingredient_name_array.length < 4 ){
             ingredient_name_array.push(ingredient_name);    
             document.getElementById(index+"").innerHTML  += 
             `
