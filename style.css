@@ -29,6 +29,8 @@
     padding: 8px;
     grid-column: 1;
     grid-row: 1 / 8;
+    color: white;
+    font-family: serif;
 }
 
 .previouslyFoodBGDiv {
@@ -74,6 +76,8 @@
     justify-content: center;
     grid-column: 3;
     grid-row: 1 / 8;
+    color: white;
+    font-family: serif;
     
 }
 
@@ -87,6 +91,7 @@
 }
 .addedIngredient{
    
+
 }
 
 .navbar {
