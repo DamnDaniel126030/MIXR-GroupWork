@@ -39,12 +39,19 @@
 }
 
 .previouslyFoodBGDiv {
+   
     background-image: url('image/pageimages/minecraft-stone-brick-texture.webp');
     height: 600px;
     width: 500px;
     background-size: cover;
     margin: auto;
     font-weight: bolder;
+}
+
+.previouslyFood{  
+    margin-left:15px ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .mixrButtonDiv{
