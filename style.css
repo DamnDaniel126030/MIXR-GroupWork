@@ -144,13 +144,15 @@ body {
 }
 
 .footerDiv {
-
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    background-image: url('image/pageimages/wp10944792.png');
+    height: 5%;
+    background-image: url('image/pageimages/bedrocktexture.webp');
     color: white;
     font-family: serif;
+    font-weight: bolder;
     text-align: center;
-
-    
 }
 
