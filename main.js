@@ -54,23 +54,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let toDisableIgredients = [];
     let toDisableIgredientsUnique = [];
 
-    let count = 0
+
     function ingredientAdds(ingredient_name, imagePath){
         if(ingredient_name_array.length < 4 ){
-            ingredient_name_array.push(ingredient_name);
-            foodArray.forEach(element => {
-            
-                for (let i = 0; i < element["ingredientNeeded"].length; i++) {
-                    if(element["ingredientNeeded"][i] == ingredient_name_array[i]){
-                        
-                        count ++;
-                        console.log(count);
-                    }
-                    
-                }
-            })
-            
-                
+            ingredient_name_array.push(ingredient_name);         
             document.getElementById(index+"").innerHTML  += 
             `
                 <img style="width: 100px; height: 100px"  src= ${"./image/ingredients/"+imagePath+""} alt="">
@@ -125,7 +112,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 
                 difference =  element["ingredientNeeded"].filter((ingredientNeeded) => !ingredient_name_array.includes(ingredientNeeded));
             }        
-            if(difference.length == 0 && count != 7){
+            if(difference.length == 0){
                 document.getElementById("craftedFood").innerHTML = 
                 `
                     <img style="width: 150px; height: 150px"  src= ${"./image/foods/"+element.imgName+""} alt="">
