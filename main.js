@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             toDisableIgredients = [];
         }
         else{
-            alert("Nem lehet négynél több hozzávalót használni!")
+            alert("Cannot add more than 4 ingredients!")
             document.getElementById("1").innerHTML  = "";
             document.getElementById("2").innerHTML  = "";
             document.getElementById("3").innerHTML  = "";
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             if(difference.length == 0){
                 document.getElementById("craftedFood").innerHTML = 
                 `
-                    <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                    <img style="width: 150px; height: 150px"  src= ${"./image/foods/"+element.imgName+""} alt="">
                     <p>${element.name}</p>
                 `
                 document.getElementById("previouslyFood").innerHTML += 
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             };
         });
         if(!boolean){
-            alert("nincs ilyen opció");
+            alert("No recipe found with these ingredients!");
             ingredient_name_array = [];
             index= 1;
             document.getElementById("1").innerHTML  = "";

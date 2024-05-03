@@ -39,7 +39,7 @@
 .previouslyFoodBGDiv {
     background-image: url('image/pageimages/minecraft-stone-brick-texture.webp');
     height: 600px;
-    width: 400px;
+    width: 500px;
     background-size: cover;
     margin: auto;
     font-weight: bolder;
@@ -95,6 +95,7 @@
 
 .navbar {
     background-image: url('image/pageimages/wp10944792.png');
+    width: 100%;
     
 }
 
@@ -108,6 +109,13 @@ h3 {
     color: white;
     font-family: serif;
     font-weight: bolder;
+    border-bottom: 2px white dashed;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.uniqueh3 {
+    width: 460px;
 }
 
 body {
@@ -121,7 +129,7 @@ body {
     font-family: serif;
     width: 120px;
     height: 80px;
-    border: 2px white solid;
+    border: 3px white dashed;
     margin-left: 20px;
     font-weight: bolder;
 
@@ -134,19 +142,27 @@ body {
     font-weight: bolder;
     width: 120px;
     height: 80px;
-    border: 2px white solid;
+    border: 3px white dashed;
     margin-left: 20px;
     
 }
 
 .footerDiv {
-
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    background-image: url('image/pageimages/wp10944792.png');
+    height: 5%;
+    background-image: url('image/pageimages/bedrocktexture.webp');
     color: white;
     font-family: serif;
+    font-weight: bolder;
     text-align: center;
+}
 
-    
+hr {
+    color: white;
+    width: 100%;
+    border: 4px white solid;
 }
 
