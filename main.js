@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     
     const ingredientNeededArray = [];
     
+    const daninakArray = [];
     
     function addToArrayIngredient(food_data){
         for (let index = 0; index < food_data.length; index++) {
@@ -50,7 +51,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
            
             
         }
+        ingredientNeededArray.forEach(element =>{
+            element["ingredientNeeded"].filter(ingredients =>daninakArray.push(ingredients));
+        })
     }
+    
+    
+
+
     
     let index= 1
     let ingredient_name_array = [];
@@ -73,10 +81,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
 
     }
-
+    
+    
     function mixrButton(){
         let boolean = false;
-        ingredientNeededArray.forEach(element => {
+        daninakArray.forEach(element =>{
+            console.log(element);
+        })
+    
+      /*   ingredientNeededArray.forEach(element => {
         let difference
             if(element["ingredientNeeded"].length <= ingredient_name_array.length){
                 difference =  ingredient_name_array.filter((ingredientNeeded) => !element["ingredientNeeded"].includes(ingredientNeeded));
@@ -110,8 +123,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 }
             
             
-        });
-        if(!boolean){
+        }); */
+       /*  if(!boolean){
             alert("nincs ilyen opció");
             ingredient_name_array = [];
             index= 1;
@@ -122,7 +135,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }else{
             index= 1
             ingredient_name_array = [];
-        }
+        } */
            
 
         
