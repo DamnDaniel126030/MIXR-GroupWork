@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     const ingredientArray = [];
 
-    async function createButton(ingredient_data){
+    function createButton(ingredient_data){
         let buttons = "";
         for (let index = 0; index < ingredient_data.length; index++) {
             const element = ingredient_data[index];
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let ingredient_name_array = [];
 
     let toDisableIgredients = [];
+    let toDisableIgredientsUnique = [];
 
     function ingredientAdds(ingredient_name, imagePath){
         if(ingredient_name_array.length < 4 ){
@@ -67,13 +68,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     })
                 }
             });
-            console.log(toDisableIgredients);
-            for (let i = 0; i < toDisableIgredients.length; i++){
-                if (toDisableIgredients[i] == ingredientArray[i].name){
-                    document.getElementById(ingredientArray[i].id).classList.add("d-none");
+            toDisableIgredientsUnique = [...new Set(toDisableIgredients)]
+            console.log(toDisableIgredientsUnique);
+            for (let i = 0; i < toDisableIgredientsUnique.length; i++){
+                if (ingredientArray[i].name == toDisableIgredientsUnique[i]){
+                    document.getElementById(ingredientArray[i].id).classList.add("d-none")
                 }
             }
             toDisableIgredients = [];
+            toDisableIgredientsUnique = [];
         }
         else{
             alert("Cannot add more than 4 ingredients!")
