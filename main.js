@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             index++;
         }
         else{
-            alert("Nem lehet négynél több hozzávalót használni!")
+            alert("Cannot add more than 4 ingredients!")
             document.getElementById("1").innerHTML  = "";
             document.getElementById("2").innerHTML  = "";
             document.getElementById("3").innerHTML  = "";
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             };
         });
         if(!boolean){
-            alert("nincs ilyen opció");
+            alert("No recipe was found with these ingredients!");
             ingredient_name_array = [];
             index= 1;
             document.getElementById("1").innerHTML  = "";
