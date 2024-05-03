@@ -51,8 +51,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let ingredient_name_array = [];
 
     let usedRecipes = [];
+    let usedIngredients = [];
+    let usedIngredientsUnique = [];
     let toDisableIgredients = [];
-    let toDisableIgredientsUnique = [];
 
 
     function ingredientAdds(ingredient_name, imagePath){
@@ -68,18 +69,30 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     usedRecipes.push(recipe)
                 }
             });
-            console.log(usedRecipes);
-            toDisableIgredientsUnique = [...new Set(toDisableIgredients)]
-            console.log(toDisableIgredientsUnique);
-            toDisableIgredientsUnique.forEach(ingredient => {
-                ingredientArray.forEach(item => {
-                    if (ingredient == item.name){
-                        document.getElementById(item.id).classList.add("d-none")
-                    }
-                })
-            })
+            usedRecipes.forEach(recipe => {
+                recipe.forEach(ingredient => {
+                    usedIngredients.push(ingredient)
+                });
+            });
+            usedIngredientsUnique = [...new Set(usedIngredients)];
+            console.log(usedIngredientsUnique);
+
+            ingredientArray.forEach(item => {
+                if (!usedIngredientsUnique.includes(item.name)){
+                    toDisableIgredients.push(item.name)
+                };
+            });
+
+            toDisableIgredients.forEach(ingredient => {
+                const id = findId(ingredient);
+                const button = document.getElementById(id);
+                button.classList.add("d-none");
+            });
+
             toDisableIgredients = [];
-            toDisableIgredientsUnique = [];
+            usedRecipes = [];
+            usedIngredients = [];
+            usedIngredientsUnique = [];
         }
         else{
             alert("Cannot add more than 4 ingredients!")
@@ -91,6 +104,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
             ingredient_name_array = [];
         }
        
+    };
+
+    function findId(ingredientName){
+        let i = 0;
+        while (i < ingredientArray.length && ingredientArray[i].name != ingredientName){
+            i++;
+        };
+        if (i < ingredientArray.length){
+            return ingredientArray[i].id
+        };
     };
 
     function enableButtons(){
