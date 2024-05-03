@@ -41,7 +41,7 @@ readDirectory(folderNameIngredients)
 
 function writeJSONsIngredients(){
     for (let i = 0; i < ingredients.length; i++){
-        const id = i + 1;
+        const id = i + 5;
         const name = ingredients[i];
         const img = ingredientImgs[i];
     
@@ -104,7 +104,7 @@ readDirectory(folderNameFoods)
 
 function writeJSONsFoods(){
     for (let i = 0; i < foods.length; i++){
-        const id = i + 1;
+        const id = i + 5;
         const name = foods[i];
         const img = foodImgs[i];
         const ingredientNeeded = ingredientsNeeded[i];
