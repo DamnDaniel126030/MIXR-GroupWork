@@ -77,28 +77,38 @@ document.addEventListener("DOMContentLoaded", ()=>{
     function mixrButton(){
         let boolean = false;
         ingredientNeededArray.forEach(element => {
-           let difference =  element["ingredientNeeded"].filter((ingredientNeeded) => !ingredient_name_array.includes(ingredientNeeded));
-            if(difference.length == 0){
-                document.getElementById("craftedFood").innerHTML = 
-                `
-                <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
-                <p>${element.name}</p>
-                `
-                document.getElementById("previouslyFood").innerHTML += 
-                `
-                <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
-                <p>${element.name}</p>
-                `
-
+        let difference
+            if(element["ingredientNeeded"].length <= ingredient_name_array.length){
+                difference =  ingredient_name_array.filter((ingredientNeeded) => !element["ingredientNeeded"].includes(ingredientNeeded));
+               
+            }if(element["ingredientNeeded"].length >= ingredient_name_array.length){
                 
-                document.getElementById("1").innerHTML  = "";
-                document.getElementById("2").innerHTML  = "";
-                document.getElementById("3").innerHTML  = "";
-                document.getElementById("4").innerHTML  = "";
-                ingredient_name_array = [];
-                index= 1
-                boolean = true;
+                difference =  element["ingredientNeeded"].filter((ingredientNeeded) => !ingredient_name_array.includes(ingredientNeeded));
             }
+                    
+                    if(difference.length == 0){
+                
+                        document.getElementById("craftedFood").innerHTML = 
+                        `
+                        <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                        <p>${element.name}</p>
+                        `
+                        document.getElementById("previouslyFood").innerHTML += 
+                        `
+                        <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                        <p>${element.name}</p>
+                        `
+        
+                        
+                        document.getElementById("1").innerHTML  = "";
+                        document.getElementById("2").innerHTML  = "";
+                        document.getElementById("3").innerHTML  = "";
+                        document.getElementById("4").innerHTML  = "";
+                    
+                        
+                        boolean = true;
+                }
+            
             
         });
         if(!boolean){
@@ -109,6 +119,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
             document.getElementById("2").innerHTML  = "";
             document.getElementById("3").innerHTML  = "";
             document.getElementById("4").innerHTML  = "";
+        }else{
+            index= 1
+            ingredient_name_array = [];
         }
            
 
