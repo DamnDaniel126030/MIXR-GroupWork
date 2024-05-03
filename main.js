@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     const ingredientArray = [];
 
-    async function createButton(ingredient_data){
+    function createButton(ingredient_data){
         let buttons = "";
         for (let index = 0; index < ingredient_data.length; index++) {
             const element = ingredient_data[index];
@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let index= 1
     let ingredient_name_array = [];
 
+    let usedRecipes = [];
     let toDisableIgredients = [];
+    let toDisableIgredientsUnique = [];
 
     let count = 0
     function ingredientAdds(ingredient_name, imagePath){
@@ -75,19 +77,22 @@ document.addEventListener("DOMContentLoaded", ()=>{
             `
             index++;
             ingredientNeededArray.forEach(recipe => {
-                if (!recipe.includes(ingredient_name)){
-                    recipe.forEach(item => {
-                        toDisableIgredients.push(item)
-                    })
+                if (recipe.includes(ingredient_name)){
+                    usedRecipes.push(recipe)
                 }
             });
-            console.log(toDisableIgredients);
-            for (let i = 0; i < toDisableIgredients.length; i++){
-                if (toDisableIgredients[i] == ingredientArray[i].name){
-                    document.getElementById(ingredientArray[i].id).classList.add("d-none");
-                }
-            }
+            console.log(usedRecipes);
+            toDisableIgredientsUnique = [...new Set(toDisableIgredients)]
+            console.log(toDisableIgredientsUnique);
+            toDisableIgredientsUnique.forEach(ingredient => {
+                ingredientArray.forEach(item => {
+                    if (ingredient == item.name){
+                        document.getElementById(item.id).classList.add("d-none")
+                    }
+                })
+            })
             toDisableIgredients = [];
+            toDisableIgredientsUnique = [];
         }
         else{
             alert("Cannot add more than 4 ingredients!")
@@ -128,9 +133,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     <p>${element.name}</p>
                 `
                 document.getElementById("previouslyFood").innerHTML += 
-                `   
-                    <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
-                    <p>${element.name}</p>
+                `   <div style="background-image: url('image/pageimages/itemframe.webp'); background-size: cover; background-repeat: no-repeat; width: 150px; height: 150px;">
+                        <div>
+                            <img style="width: 100px; height: 100px"  src= ${"./image/foods/"+element.imgName+""} alt="">
+                            <p>${element.name}</p>
+                        </div>
+                    </div>
                 `
 
                 document.getElementById("1").innerHTML  = "";

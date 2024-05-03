@@ -81,7 +81,7 @@ const filePathFoods = "./food.json";
 
 const foods = ["Rainbow Special", "Pink Hunter", "Pink Carrot Stew", "Chicken Sandwich", "Orange Hunter", "Sweet Apple Pálinka", "Potato Rainbow Stew", "Yellow Hunter", "Skewer", "Sushi", "Stuffed Chicken"];
 
-const ingredientsNeeded = [["apple", "watermelon", "berry", "rotten meat"], ["beetroot", "chicken thigh", "bowl"], ["beetroot", "chicken thigh", "carrot", "bowl"], ["chicken", "bread"], ["chicken thigh", "carrot", "bowl"], ["sugar", "apple", "water"], ["potato", "carrot", "beetroot", "bowl"], ["cooked potato", "chicken thigh", "carrot"], ["chicken", "cooked lamb", "cooked porkchop", "stick"], ["seaweed", "fish"], ["chicken", "carrot", "potato", "seed"]];
+const ingredientsNeeded = [["apple", "watermelon", "berry", "rotten meat"], ["beetroot", "chicken thigh", "bowl"], ["beetroot", "chicken thigh", "carrot", "bowl"], ["chicken", "bread"], ["chicken thigh", "carrot", "bowl"], ["sugar", "apple", "water"], ["potato", "carrot", "beetroot", "bowl"], ["cooked potatoes", "chicken thigh", "carrot"], ["chicken", "cooked lamb", "cooked porkchop", "stick"], ["seaweed", "fish"], ["chicken", "carrot", "potato", "seed"]];
 
 
 
