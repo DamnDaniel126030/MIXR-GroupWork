@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
         else{
             alert("Nem lehet négynél több hozzávalót használni!")
+            document.getElementById("1").innerHTML  = "";
+            document.getElementById("2").innerHTML  = "";
+            document.getElementById("3").innerHTML  = "";
+            document.getElementById("4").innerHTML  = "";
+            index= 1;
+            ingredient_name_array = [];
         }
     };
 
