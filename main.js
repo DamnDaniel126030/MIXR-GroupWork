@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             ingredientArray.push(element);
             let button = 
             `
-            <button id="${element.id}" onclick="ingredientAdds('${element.name}','${element.imgName}')" class="ingredient-button">
+            <button id="${element.id}" onclick="ingredientAdds('${element.name}','${element.imgName}','${element.id}')" class="ingredient-button">
                 <img style="width: 40px" src= ${"./image/ingredients/"+element.imgName+""} alt="">
                 <p >${element.name}</p>
             </button>
@@ -56,8 +56,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let toDisableIgredients = [];
 
 
-    function ingredientAdds(ingredient_name, imagePath){
+    function ingredientAdds(ingredient_name, imagePath, idButton){
         if(ingredient_name_array.length < 4 ){
+            const button = document.getElementById(idButton+"");
+            button.classList.add("d-none");
             ingredient_name_array.push(ingredient_name);         
             document.getElementById(index+"").innerHTML  += 
             `
