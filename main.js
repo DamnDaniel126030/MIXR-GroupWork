@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     async function getIngredientData(){
-        fetch('./ingredient.json')
-        .then((response) => response.json())
-        .then((data) => createButton(data));
+        await fetch('./ingredient.json')
+            .then((response) => response.json())
+            .then((data) => createButton(data));
     };
     
     getIngredientData();
 
     const ingredientArray = [];
 
-    function createButton(ingredient_data){
+    async function createButton(ingredient_data){
         let buttons = "";
         for (let index = 0; index < ingredient_data.length; index++) {
             const element = ingredient_data[index];
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
         document.getElementById("ingredient").innerHTML = buttons;
     };
 
-    function getFoodData(){
-        fetch('./food.json')
-        .then((response) => response.json())
-        .then((data) => addToArrayIngredient(data))
+    async function getFoodData(){
+        await fetch('./food.json')
+            .then((response) => response.json())
+            .then((data) => addToArrayIngredient(data))
     };
     
     getFoodData();
