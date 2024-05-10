@@ -157,7 +157,6 @@ body {
 }
 
 .footerDiv {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -175,3 +174,6 @@ hr {
     border: 4px white solid;
 }
 
+h1 {
+    margin-bottom: 0;
+}
